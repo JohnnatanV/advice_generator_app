@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+:root {
+  /* Primary */
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+/* MAIN */
+
+body {
+  background-color: var(--dark-blue);
+  height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card {
+  border-radius: 10px;
+  background-color: var(--dark-grayish-blue);
+  width: 344px;
+  height: 313px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h6 {
+  color: var(--neon-green);
+}
+
+h3 {
+  color: var(--light-cyan);
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
+.advice-content {
+  font-size: 28px;
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
