@@ -25,25 +25,31 @@
   <body>
     <main>
       <div id="card">
-        <h6 id="cardTitle" class="card__title">
+        <h5 id="cardTitle" class="card__title">
           Advice #<!-- Advice ID goes here -->
-        </h6>
-        <h3 id="cardQuote" class="card__quote">"Advice text goes here"</h3>
-        <img
-          src="images/pattern-divider-mobile.svg"
-          class="card__divider"
-          alt="card divider"
-        />
+        </h5>
+        <h3 id="cardQuote" class="card__quote">
+          "Advice text goes here Advice text goes hereAdvice text goes
+          hereAdvice text goes here"
+        </h3>
+        <picture>
+          <source
+            class="card__divider"
+            media="(min-width: 650px)"
+            srcset="./images/pattern-divider-desktop.svg"
+          />
+          <img class="card__divider" src="images/pattern-divider-mobile.svg" />
+        </picture>
         <button id="cardBtn" class="card__btn">
           <img src="images/icon-dice.svg" alt="dice button" />
         </button>
       </div>
     </main>
     <footer class="attribution">
-      Challenge by
+      <span>Challenge by</span>
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by
+      ><span>. Coded by</span>
       <a href="https://github.com/JohnnatanV" target="_blank">JohnnatanV</a>.
     </footer>
     <script src="src/app.js"></script>
