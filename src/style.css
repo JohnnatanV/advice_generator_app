@@ -45,9 +45,12 @@ main {
   align-items: center;
 
   .card__title {
+    font-size: 0.9rem;
     color: var(--neon-green);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
   }
 
   .card__quote {
