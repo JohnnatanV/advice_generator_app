@@ -5,22 +5,27 @@ async function fetchData() {
   const cardQuote = document.getElementById("cardQuote");
   const cardBtn = document.getElementById("cardBtn");
 
-  async function result() {
-    let url = "https://api.adviceslip.com/advice";
-    const urlData = await fetch(url);
-    const response = await urlData.json();
-    const data = await response.slip;
-    console.log(response);
-    if (data.id === parseInt(cardId.innerText.slice(8))) {
-      result();
-    } else {
+  let url = "https://api.adviceslip.com/advice";
+
+  async function result(getData) {
+    try {
+      const urlData = await fetch(getData);
+      const response = await urlData.json();
+      const data = await response.slip;
+
+      if (data.id === parseInt(cardId.innerText.slice(8))) result(url);
+
       cardId.innerText = `advice #${data.id}`;
       cardQuote.innerText = `"${data.advice}"`;
+    } catch (error) {
+      console.log(`Error caught: ${error.message}`);
     }
   }
+
   cardBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    result();
+    result(url);
   });
-  result();
+
+  result(url);
 }
