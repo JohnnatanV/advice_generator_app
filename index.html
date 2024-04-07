@@ -25,17 +25,23 @@
   <body>
     <main>
       <div id="card">
-        <h5 id="cardTitle" class="card__title">
+        <h1 id="cardTitle" class="card__title">
           <!-- Advice ID goes here -->
-        </h5>
-        <h3 id="cardQuote" class="card__quote"><!-- Advice goes here --></h3>
+        </h1>
+        <span id="cardQuote" class="card__quote"
+          ><!-- Advice goes here --></span
+        >
         <picture>
           <source
             class="card__divider"
             media="(min-width: 650px)"
             srcset="./images/pattern-divider-desktop.svg"
           />
-          <img class="card__divider" src="images/pattern-divider-mobile.svg" />
+          <img
+            class="card__divider"
+            src="images/pattern-divider-mobile.svg"
+            alt="divider"
+          />
         </picture>
         <button id="cardBtn" class="card__btn">
           <img src="images/icon-dice.svg" alt="dice button" />
